@@ -1,0 +1,121 @@
+/* Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Header */
+.header {
+  width: 100%;
+  height: 70px;
+  background: #050505;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #1a1a1a;
+}
+
+/* Logo */
+.logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #a855f7;
+  text-shadow: 0 0 10px #a855f7;
+}
+
+/* Nav */
+.nav {
+  display: flex;
+  gap: 30px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #ccc;
+  font-size: 1rem;
+  position: relative;
+  transition: 0.3s;
+}
+
+/* Glow Hover */
+.nav a:hover {
+  color: #a855f7;
+  text-shadow: 0 0 8px #a855f7, 0 0 15px #a855f7;
+}
+
+/* Animated underline */
+.nav a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background: #a855f7;
+  transition: 0.4s ease;
+  transform: translateX(-50%);
+  box-shadow: 0 0 8px #a855f7;
+}
+
+.nav a:hover::after {
+  width: 100%;
+}
+
+/* Active link glow */
+.active-link {
+  color: #a855f7;
+  text-shadow: 0 0 10px #a855f7, 0 0 20px #a855f7;
+}
+
+.active-link::after {
+  width: 100%;
+}
+
+/* Hamburger */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: #050505;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    gap: 20px;
+    transform: translateY(-200%);
+    transition: 0.4s ease-in-out;
+  }
+
+  .nav.active {
+    transform: translateY(0);
+  }
+
+  .nav a {
+    font-size: 1.2rem;
+  }
+}

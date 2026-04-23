@@ -1,0 +1,74 @@
+.feedbacks {
+  min-height: 100vh;
+  background: #050505;
+  color: #fff;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.feedbacks h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.feedbacks h2 span {
+  color: #a855f7;
+  text-shadow: 0 0 10px #a855f7;
+}
+
+/* Grid */
+.feedback-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Card */
+.feedback-card {
+  background: #0d0d0d;
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #222;
+  transition: 0.3s;
+  text-align: left;
+}
+
+/* Message */
+.feedback-card .message {
+  color: #aaa;
+  margin-bottom: 15px;
+  font-style: italic;
+}
+
+/* Name */
+.feedback-card h3 {
+  color: #a855f7;
+}
+
+/* Role */
+.feedback-card span {
+  font-size: 0.85rem;
+  color: #ccc;
+}
+
+/* Hover glow */
+.feedback-card:hover {
+  transform: translateY(-8px);
+  border-color: #a855f7;
+  box-shadow: 0 0 20px #a855f7;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .feedback-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .feedback-grid {
+    grid-template-columns: 1fr;
+  }
+}
