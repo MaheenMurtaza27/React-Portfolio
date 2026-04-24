@@ -7,7 +7,7 @@ import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import Feedbacks from "./components/Feedbacks";
 import Blogs from "./components/Blogs";
-import Contact from "./components/contact";
+import Contact from "./components/Contact";
 
 
 function App() {
