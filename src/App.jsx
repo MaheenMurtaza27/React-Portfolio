@@ -1,13 +1,13 @@
 import { useState } from 'react'
 import './App.css'
-import Header from "./components/Header";
-import Home from "./components/Home";
-import About from "./components/About";
-import Projects from "./components/Projects";
-import Skills from "./components/Skills";
-import Feedbacks from "./components/Feedbacks";
-import Blogs from "./components/Blogs";
-import Contact from "./components/Contact";
+import Header from "./Components/Header";
+import Home from "./Components/Home";
+import About from "./Components/About";
+import Projects from "./Components/Projects";
+import Skills from "./Components/Skills";
+import Feedbacks from "./Components/Feedbacks";
+import Blogs from "./Components/Blogs";
+import Contact from "./Components/Contact";
 
 
 function App() {
